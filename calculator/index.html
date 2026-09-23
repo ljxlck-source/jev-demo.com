@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5SY53Y1WL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N5SY53Y1WL');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tokens calculator | JEV Demo</title><meta name="description" content="Estimate monthly AI bill savings and input-token costs using your own spending, decision workload share and price assumptions."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jev-demo.com/calculator/">
+<link rel="alternate" hreflang="en" href="https://jev-demo.com/calculator/">
+<link rel="alternate" hreflang="zh-CN" href="https://jev-demo.com/zh/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://jev-demo.com/calculator/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="JEV Demo"><meta property="og:title" content="tokens calculator | JEV Demo"><meta property="og:description" content="Estimate monthly AI bill savings and input-token costs using your own spending, decision workload share and price assumptions."><meta property="og:url" content="https://jev-demo.com/calculator/"><meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="tokens calculator | JEV Demo"><meta name="twitter:description" content="Estimate monthly AI bill savings and input-token costs using your own spending, decision workload share and price assumptions.">
+<meta property="og:image" content="https://jev-demo.com/social-card.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="JEV Demo — Jev AI demos"><meta name="twitter:image" content="https://jev-demo.com/social-card.png">
+<link rel="icon" href="/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"tokens calculator","url":"https://jev-demo.com/calculator/","inLanguage":"en"}</script>
+<style>.tool-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:28px 0 16px}.tool-heading h1{margin:0;font-size:clamp(26px,4vw,40px)}.tool-note{color:#aeb5b2;line-height:1.6;margin:0 0 20px}.tool-frame{display:block;width:100%;height:80vh;min-height:600px;border:1px solid #343b38;border-radius:16px;background:#fff}.header-nav{flex-wrap:wrap}@media(max-width:600px){.tool-frame{height:80svh;min-height:480px}}</style><link rel="stylesheet" href="/calculator.css"><script src="/calculator.js" defer></script></head>
+<body>
+<header><a class="brand" href="/" aria-label="JEV Demo"><img class="brand-logo" src="/logo.svg" alt="" width="42" height="42"><strong>JEV <span>Demo</span></strong></a><nav class="header-nav" aria-label="Main navigation"><a href="/playground/">Playground</a><a href="/">All demos</a><a class="language-link" href="/zh/calculator/" lang="zh-CN" hreflang="zh-CN">中文</a></nav></header>
+<main class="calculator-page"><section class="calculator-panel"><h1>tokens calculator</h1><p class="calc-lead">Adjust the example inputs to estimate your costs.</p><div class="calc-columns">
+<section class="calc-box"><h2>Monthly bill</h2><label for="bill">Monthly AI spending (USD)</label><input id="bill" type="number" min="0" step="any" value="10000">
+<label for="share">Share of your bill spent on decision calls</label><div class="range-row"><input id="share" type="range" min="0" max="100" value="60"><output id="share-value" for="share">60%</output></div>
+<label for="saving">Expected savings on those decision calls</label><div class="range-row"><input id="saving" type="range" min="0" max="100" value="95"><output id="saving-value" for="saving">95%</output></div>
+<div class="calc-result" role="status"><p>Estimated monthly savings <strong id="saved">USD 5,700</strong></p><p>Share of the original bill saved <strong id="percent">57%</strong></p><p class="calc-small">Estimated remaining bill <span id="remaining">USD 4,300</span></p><p class="calc-small" id="formula">60% × 95% = 57%</p></div></section>
+<section class="calc-box"><h2>Input-token cost</h2><label for="tokens">Input tokens per call (state and questions)</label><input id="tokens" type="number" min="0" step="1" value="300"><label for="calls">Number of calls</label><input id="calls" type="number" min="0" step="1" value="100000"><label for="price">USD per million input tokens</label><input id="price" type="number" min="0" step="any" value="0.042"><p class="calc-small">0.042 is an editable example from the reference screenshot, not a verified current price.</p><div class="calc-result" role="status"><p>Estimated cost per call <strong id="each">USD 0.0000126</strong></p><p>Estimated total <strong id="total">USD 1.26</strong></p></div></section></div><p class="calc-small calc-foot">Bill savings ≈ decision-call cost share × savings on those calls. The two estimates are independent. Input-token costs exclude any other charges; migration, retries, failed requests, human review and generation steps may add costs. Savings are assumptions, not measured results.</p><noscript>Enable JavaScript to update these example estimates.</noscript></section></main></body></html>

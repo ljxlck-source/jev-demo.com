@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5SY53Y1WL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N5SY53Y1WL');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tokens calculator | JEV Demo</title><meta name="description" content="输入每月 AI 账单、判断类调用费用占比及预计节省比例，估算总账单节省金额；按输入 token、调用次数和自定义单价估算费用。"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jev-demo.com/zh/calculator/">
+<link rel="alternate" hreflang="en" href="https://jev-demo.com/calculator/">
+<link rel="alternate" hreflang="zh-CN" href="https://jev-demo.com/zh/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://jev-demo.com/calculator/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="JEV Demo"><meta property="og:title" content="tokens calculator | JEV Demo"><meta property="og:description" content="输入每月 AI 账单、判断类调用费用占比及预计节省比例，估算总账单节省金额；按输入 token、调用次数和自定义单价估算费用。"><meta property="og:url" content="https://jev-demo.com/zh/calculator/"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="tokens calculator | JEV Demo"><meta name="twitter:description" content="输入每月 AI 账单、判断类调用费用占比及预计节省比例，估算总账单节省金额；按输入 token、调用次数和自定义单价估算费用。">
+<meta property="og:image" content="https://jev-demo.com/social-card.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="JEV Demo — Jev AI demos"><meta name="twitter:image" content="https://jev-demo.com/social-card.png">
+<link rel="icon" href="/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"tokens calculator","url":"https://jev-demo.com/zh/calculator/","inLanguage":"zh-CN"}</script>
+<style>.tool-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:28px 0 16px}.tool-heading h1{margin:0;font-size:clamp(26px,4vw,40px)}.tool-note{color:#aeb5b2;line-height:1.6;margin:0 0 20px}.tool-frame{display:block;width:100%;height:80vh;min-height:600px;border:1px solid #343b38;border-radius:16px;background:#fff}.header-nav{flex-wrap:wrap}@media(max-width:600px){.tool-frame{height:80svh;min-height:480px}}</style><link rel="stylesheet" href="/calculator.css"><script src="/calculator.js" defer></script></head>
+<body>
+<header><a class="brand" href="/zh/" aria-label="JEV Demo"><img class="brand-logo" src="/logo.svg" alt="" width="42" height="42"><strong>JEV <span>Demo</span></strong></a><nav class="header-nav" aria-label="主导航"><a href="/zh/playground/">在线使用</a><a href="/zh/">全部案例</a><a class="language-link" href="/calculator/" lang="en" hreflang="en">English</a></nav></header>
+<main class="calculator-page"><section class="calculator-panel"><h1>tokens calculator</h1><p class="calc-lead">填入你自己的数字，下方默认值仅为计算示例。</p><div class="calc-columns">
+<section class="calc-box"><h2>整张账单</h2><label for="bill">每月 AI 花费（美元）</label><input id="bill" type="number" min="0" step="any" value="10000">
+<label for="share">判断类调用（分类、路由、打分、核查）占账单的比例</label><div class="range-row"><input id="share" type="range" min="0" max="100" value="60"><output id="share-value" for="share">60%</output></div>
+<label for="saving">这类调用本身预计能省下的比例</label><div class="range-row"><input id="saving" type="range" min="0" max="100" value="95"><output id="saving-value" for="saving">95%</output></div>
+<div class="calc-result" role="status"><p>预计每月省 <strong id="saved">USD 5,700</strong></p><p>占原账单 <strong id="percent">57%</strong></p><p class="calc-small">预计剩余账单 <span id="remaining">USD 4,300</span></p><p class="calc-small" id="formula">60% × 95% = 57%</p></div></section>
+<section class="calc-box"><h2>按量算调用费用</h2><label for="tokens">每次调用的输入 token（state 加问题）</label><input id="tokens" type="number" min="0" step="1" value="300"><label for="calls">调用次数</label><input id="calls" type="number" min="0" step="1" value="100000"><label for="price">每百万输入 token 单价（美元）</label><input id="price" type="number" min="0" step="any" value="0.042"><p class="calc-small">0.042 是参考截图中的示例单价，可修改，未核实为当前官方价格。</p><div class="calc-result" role="status"><p>每次预计 <strong id="each">USD 0.0000126</strong></p><p>合计预计 <strong id="total">USD 1.26</strong></p></div></section></div><p class="calc-small calc-foot">总账单节省比例 ≈ 判断类调用费用占比 × 这类调用的节省比例。两栏分别估算，不互相推导。右栏仅计算输入 token 费用，不含其他可能收费；迁移、重试、失败请求、人工复核和生成步骤需另算。节省比例是用户假设，不是实测结果。</p><noscript>请启用 JavaScript 以更新计算结果，当前显示的是示例。</noscript></section></main></body></html>
