@@ -13,7 +13,6 @@
 - 英文首页：/。
 - 简体中文页面：/zh/。
 - 分类、搜索、浏览量筛选与视频弹窗。
-- 在线使用内页：/playground/ 和 /zh/playground/，嵌入 jevai.info 的中文工具。
 - Google Analytics：G-N5SY53Y1WL。
 - 两种语言的 Title、Description、canonical、hreflang。
 - robots.txt、sitemap.xml、404.html、新标志和分享图片。
