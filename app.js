@@ -62,6 +62,8 @@ async function openPlayer(item) {
  if(safeUrl(item.videoUrl)){
   const video=document.createElement('video');video.controls=true;video.playsInline=true;video.preload='metadata';video.src=safeUrl(item.videoUrl);if(safeUrl(item.posterUrl))video.poster=safeUrl(item.posterUrl);
   video.addEventListener('error',()=>{if(token===generation)showUnavailable(media,item,L.video_error);},{once:true});media.append(video);$('media-note').textContent=L.media_note;
+  // Start within the thumbnail click gesture; keep controls if playback is blocked.
+  video.play().catch(()=>{});
  }else if(safeUrl(item.sourceUrl)){
   $('media-note').textContent=L.embed_note;media.append(text('div',L.loading,'load-state'));
   try{const twttr=await loadWidgets();if(token!==generation)return;const id=new URL(item.sourceUrl).pathname.match(/\/status\/(\d+)/)?.[1];if(!id)throw new Error('Invalid post');const host=text('div');media.replaceChildren(host);
