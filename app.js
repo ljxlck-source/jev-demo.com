@@ -5,11 +5,32 @@ let category = 'All', generation = 0, widgetsPromise;
 const $ = id => document.getElementById(id);
 const text = (tag, value, cls) => { const el=document.createElement(tag);el.textContent=value;if(cls)el.className=cls;return el; };
 const safeUrl = value => {try {const url=new URL(value);return url.protocol==='https:'?url.href:'';}catch{return '';}};
+function applyLocale() {
+ document.documentElement.lang=L.html_lang||language;
+ if(language==='ar')document.documentElement.dir='rtl';
+ const set=(selector,value)=>{const node=document.querySelector(selector);if(node&&value)node.textContent=value;};
+ set('.intro h1',L.h1);set('.side-heading',L.category_heading);set('.side-note',L.independent);
+ set('.header-nav a[href="/calculator/"]',L.calculator_label);set('.header-nav a[href="/how-to-use-jev/"]',L.guide_label);
+ const results=document.querySelector('.results');if(results&&L.results_label)results.setAttribute('aria-label',L.results_label);
+ const search=$('search');if(search){search.placeholder=L.search;search.setAttribute('aria-label',L.search);}
+ const categoriesLabel=$('categories');if(categoriesLabel&&L.category_label)categoriesLabel.setAttribute('aria-label',L.category_label);
+ $('categories')?.querySelectorAll('[data-category]').forEach(button=>{button.textContent=categories[button.dataset.category]||button.textContent;});
+ const filters=document.querySelectorAll('.filter');
+ if(filters[0])filters[0].firstChild.textContent=L.views_label+' ';
+ if(filters[1])filters[1].firstChild.textContent=L.sort_label+' ';
+ const min=$('minimum');if(min){const values=[L.all_views,L.views_10k,L.views_100k,L.views_1m];min.querySelectorAll('option').forEach((o,i)=>{if(values[i])o.textContent=values[i];});}
+ const sort=$('sort');if(sort){const values=[L.sort_popular,L.sort_ascending,L.sort_original];sort.querySelectorAll('option').forEach((o,i)=>{if(values[i])o.textContent=values[i];});}
+ set('#empty h2',L.empty_title);set('#empty p',L.empty_text);set('#reset',L.reset);
+ set('footer span',L.footer_note);const source=document.querySelector('footer .source');if(source)source.textContent=L.source_label+' ↗';
+ $('close')?.setAttribute('aria-label',L.close);set('#original',L.original_link+' ↗');set('#case-source',L.case_link+' ↗');
+}
+applyLocale();
 function formatViews(value) {
  if(value==null)return L.unknown;
  if(language==='zh'&&value>=10000)return `${new Intl.NumberFormat('zh-CN',{maximumFractionDigits:1}).format(value/10000)} 万`;
- if(language==='en'&&value>=1000)return new Intl.NumberFormat('en',{notation:'compact',maximumFractionDigits:1}).format(value);
- return new Intl.NumberFormat(language==='zh'?'zh-CN':'en').format(value);
+ const locale={en:'en',zh:'zh-CN',ja:'ja-JP',ko:'ko-KR',ar:'ar',es:'es-ES',ru:'ru-RU'}[language]||'en';
+ if(value>=1000)return new Intl.NumberFormat(locale,{notation:'compact',maximumFractionDigits:1}).format(value);
+ return new Intl.NumberFormat(locale).format(value);
 }
 function selectCases(list,cat,minimum,order,query) {
  const q=query.trim().toLowerCase();

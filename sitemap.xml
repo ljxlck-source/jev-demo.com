@@ -1,2 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://jev-demo.com/</loc></url><url><loc>https://jev-demo.com/zh/</loc></url><url><loc>https://jev-demo.com/calculator/</loc></url><url><loc>https://jev-demo.com/zh/calculator/</loc></url><url><loc>https://jev-demo.com/how-to-use-jev/</loc></url><url><loc>https://jev-demo.com/zh/how-to-use-jev/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://jev-demo.com/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/zh/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/calculator/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/zh/calculator/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/how-to-use-jev/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/zh/how-to-use-jev/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/ja/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/ko/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/ar/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/es/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/ru/</loc>
+  </url>
+</urlset>
