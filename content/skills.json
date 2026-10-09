@@ -1,0 +1,416 @@
+[
+  {
+    "id": "project-01",
+    "category": "route",
+    "name": "jev-router",
+    "url": "https://github.com/gargpratyush/jev-router",
+    "description": "Route Claude Code tasks to a suitable lower-cost model from a defined set of candidates.",
+    "kind": "Repository",
+    "descriptionZh": "从候选模型中为 Claude Code 任务选择合适、成本较低的模型。"
+  },
+  {
+    "id": "project-02",
+    "category": "route",
+    "name": "jev-agent-skill-router",
+    "url": "https://github.com/GodsBoy/jev-agent-skill-router",
+    "description": "Choose a skill for an agent, with explicit no-skill and review paths when the match is uncertain.",
+    "kind": "Repository",
+    "descriptionZh": "为智能体选择技能；匹配不确定时，可不选技能或转入复核。"
+  },
+  {
+    "id": "project-03",
+    "category": "route",
+    "name": "jcm-router",
+    "url": "https://github.com/adarshmishra07/jcm-router",
+    "description": "A local proxy that selects a Claude model and reasoning effort for each message.",
+    "kind": "Repository",
+    "descriptionZh": "为每条消息选择 Claude 模型及推理强度的本地代理。"
+  },
+  {
+    "id": "project-04",
+    "category": "route",
+    "name": "jev-router · prismhq",
+    "url": "https://github.com/prismhq/jev-router",
+    "description": "A LiteLLM-based router that uses Jev to choose a model for each request.",
+    "kind": "Repository",
+    "descriptionZh": "基于 LiteLLM，由 Jev 为每次请求选择模型。"
+  },
+  {
+    "id": "project-05",
+    "category": "guard",
+    "name": "fx",
+    "url": "https://github.com/vercel-labs/fx",
+    "description": "A coding agent from Vercel Labs that uses Jev for permission-review decisions.",
+    "kind": "Repository",
+    "descriptionZh": "Vercel Labs 的编程智能体，使用 Jev 辅助权限审查。"
+  },
+  {
+    "id": "project-06",
+    "category": "guard",
+    "name": "jev-axi",
+    "url": "https://github.com/shiftynick/jev-axi",
+    "description": "Assess shell commands for destructive actions, data transfer, remote execution and weakened security before an agent acts.",
+    "kind": "Repository",
+    "descriptionZh": "在执行前评估命令是否涉及破坏性操作、数据传输、远程执行或安全保护削弱。"
+  },
+  {
+    "id": "project-07",
+    "category": "guard",
+    "name": "jev-guard",
+    "url": "https://github.com/leepokai/jev-guard",
+    "description": "A guard layer for coding agents that evaluates prompt injection and potentially dangerous operations.",
+    "kind": "Repository",
+    "descriptionZh": "为编程智能体评估提示注入和潜在危险操作。"
+  },
+  {
+    "id": "project-08",
+    "category": "guard",
+    "name": "is-malicious",
+    "url": "https://github.com/luantak/is-malicious",
+    "description": "Inspect dependency source and build files, then examine suspicious files and lines more closely.",
+    "kind": "Repository",
+    "descriptionZh": "检查依赖源码和构建文件，再深入查看可疑文件与代码行。"
+  },
+  {
+    "id": "project-09",
+    "category": "guard",
+    "name": "pi-heed",
+    "url": "https://github.com/Nyarlathoteppppp/pi-heed",
+    "description": "Check whether an agent’s next action actually follows the user’s request.",
+    "kind": "Repository",
+    "descriptionZh": "检查智能体的下一步操作是否符合用户请求。"
+  },
+  {
+    "id": "project-10",
+    "category": "guard",
+    "name": "jev-git",
+    "url": "https://github.com/AkashPriyadarshii/jev-git",
+    "description": "Scan changes for secrets and destructive commands before a Git commit or push.",
+    "kind": "Repository",
+    "descriptionZh": "在 Git 提交或推送前检查敏感信息和破坏性命令。"
+  },
+  {
+    "id": "project-11",
+    "category": "review",
+    "name": "Abide",
+    "url": "https://github.com/coldteadotai/abide",
+    "description": "Watch coding-agent changes and flag potential violations of project rules for review.",
+    "kind": "Repository",
+    "descriptionZh": "监测编程智能体的改动，标记可能违反项目规则的行为供人复核。"
+  },
+  {
+    "id": "project-12",
+    "category": "review",
+    "name": "Clean Code Judge",
+    "url": "https://github.com/frostney/clean-code-review",
+    "description": "Evaluate pull-request files against 31 code-quality questions, then pass findings to a writing model.",
+    "kind": "Repository",
+    "descriptionZh": "按 31 项代码质量问题评估拉取请求中的文件，再交由生成模型撰写反馈。"
+  },
+  {
+    "id": "project-13",
+    "category": "review",
+    "name": "DiffJury",
+    "url": "https://github.com/raihankhan-rk/diffjury",
+    "description": "Triage pull requests by risk and decide which reviewer should handle them.",
+    "kind": "Repository",
+    "descriptionZh": "按风险分流拉取请求，并选择相应的审查者。"
+  },
+  {
+    "id": "project-14",
+    "category": "review",
+    "name": "limpet",
+    "url": "https://github.com/noplan-inc/limpet",
+    "description": "Check completion criteria before an agent announces that a task is finished.",
+    "kind": "Repository",
+    "descriptionZh": "在智能体宣布任务完成前检查完成条件。"
+  },
+  {
+    "id": "project-15",
+    "category": "review",
+    "name": "Hunch",
+    "url": "https://github.com/Kelbie/hunch",
+    "description": "Write coding rules in plain language and check them locally or on pull requests.",
+    "kind": "Repository",
+    "descriptionZh": "用自然语言编写代码规则，在本地或拉取请求中检查。"
+  },
+  {
+    "id": "project-16",
+    "category": "browser",
+    "name": "Browserbase + Jev",
+    "url": "https://x.com/kylejeong/status/2100622054945095934",
+    "description": "Kyle Jeong’s browser-agent demonstration: Jev chooses an action; Stagehand carries it out.",
+    "kind": "Demo / report",
+    "descriptionZh": "Kyle Jeong 的浏览器智能体演示：由 Jev 选择操作，Stagehand 执行。"
+  },
+  {
+    "id": "project-17",
+    "category": "browser",
+    "name": "jev-ultrafast",
+    "url": "https://github.com/browser-use/jev-ultrafast",
+    "description": "A browser-use agent that lets Jev select the next action and uses a generative model when text is needed.",
+    "kind": "Repository",
+    "descriptionZh": "由 Jev 选择浏览器的下一步操作，需要文本时调用生成模型。"
+  },
+  {
+    "id": "project-18",
+    "category": "browser",
+    "name": "Jev Browser",
+    "url": "https://github.com/jkudish/jev-browser",
+    "description": "A browser-automation project built around Jev decisions at each step.",
+    "kind": "Repository",
+    "descriptionZh": "围绕 Jev 逐步决策构建的浏览器自动化项目。"
+  },
+  {
+    "id": "project-19",
+    "category": "browser",
+    "name": "unclutter",
+    "url": "https://github.com/kitze/unclutter",
+    "description": "A browser extension that identifies distracting page elements and removes them.",
+    "kind": "Repository",
+    "descriptionZh": "识别并移除网页中干扰元素的浏览器扩展。"
+  },
+  {
+    "id": "project-20",
+    "category": "browser",
+    "name": "typesafe-adblock",
+    "url": "https://github.com/realZachi/typesafe-adblock",
+    "description": "A Chrome extension that turns ad detection into a series of yes-or-no judgments.",
+    "kind": "Repository",
+    "descriptionZh": "将广告识别拆分为一系列是非判断的 Chrome 扩展。"
+  },
+  {
+    "id": "project-21",
+    "category": "browser",
+    "name": "public-browser",
+    "url": "https://github.com/Silbercue/public-browser",
+    "description": "Let coding agents operate a real Chrome browser, with Jev helping choose actions.",
+    "kind": "Repository",
+    "descriptionZh": "让编程智能体操作真实 Chrome 浏览器，并由 Jev 辅助选择操作。"
+  },
+  {
+    "id": "project-22",
+    "category": "write",
+    "name": "Sniff Test",
+    "url": "https://github.com/DanRWilloughby/snifftest",
+    "description": "Check paragraphs for vague phrasing, repetitive endings and other writing patterns using focused judgments.",
+    "kind": "Repository",
+    "descriptionZh": "通过专项判断检查段落中的模糊表述、重复结尾等写作模式。"
+  },
+  {
+    "id": "project-23",
+    "category": "write",
+    "name": "pagegrade",
+    "url": "https://github.com/kitze/pagegrade",
+    "description": "Evaluate sections of a web page for clarity, writing quality and SEO.",
+    "kind": "Repository",
+    "descriptionZh": "评估网页各部分的清晰度、写作质量与 SEO。"
+  },
+  {
+    "id": "project-24",
+    "category": "write",
+    "name": "JevSlop",
+    "url": "https://github.com/TKY-27/JevSlop",
+    "description": "Evaluate note.com articles across eight dimensions and combine them into a content-quality score.",
+    "kind": "Repository",
+    "descriptionZh": "从八个维度评估 note.com 文章，并汇总为内容质量评分。"
+  },
+  {
+    "id": "project-25",
+    "category": "write",
+    "name": "citation-verifier",
+    "url": "https://github.com/MarissaFamularo/citation-verifier",
+    "description": "Use Claude to locate cited passages and Jev to assess support, with a person making the final call.",
+    "kind": "Repository",
+    "descriptionZh": "由 Claude 定位引用段落、Jev 评估支持程度，再由人工作出最终判断。"
+  },
+  {
+    "id": "project-26",
+    "category": "office",
+    "name": "Email triage · Ryan Vogel",
+    "url": "https://x.com/ryanvogel/status/2100042788851101842",
+    "description": "A demonstration of categorizing email, judging priority, detecting spam and deciding whether a reply is needed.",
+    "kind": "Demo / report",
+    "descriptionZh": "演示邮件分类、优先级判断、垃圾邮件检测，以及是否需要回复的判断。"
+  },
+  {
+    "id": "project-27",
+    "category": "office",
+    "name": "Notra",
+    "url": "https://github.com/usenotra/notra",
+    "description": "A marketing-analytics platform exploring Jev for brand-visibility classification.",
+    "kind": "Repository",
+    "descriptionZh": "探索用 Jev 进行品牌可见度分类的营销分析平台。"
+  },
+  {
+    "id": "project-28",
+    "category": "office",
+    "name": "Email intent routing",
+    "url": "https://github.com/GiesN/typesafe-jev-workflow",
+    "description": "Classify incoming messages as invoices or general email and send them to the corresponding workflow.",
+    "kind": "Repository",
+    "descriptionZh": "将来信分为发票或一般邮件，并送入相应工作流。"
+  },
+  {
+    "id": "project-29",
+    "category": "office",
+    "name": "jev-curate",
+    "url": "https://github.com/AkashPriyadarshii/jev-curate",
+    "description": "Filter synthetic datasets using condition judgments and confidence, saving accepted and rejected records separately.",
+    "kind": "Repository",
+    "descriptionZh": "按条件判断和置信度筛选合成数据，分别保存接受与拒绝的记录。"
+  },
+  {
+    "id": "project-30",
+    "category": "office",
+    "name": "CV screener",
+    "url": "https://github.com/gtaras7/typesafe-jev",
+    "description": "A resume-screening experiment with editable criteria and reusable scores. Human review remains essential.",
+    "kind": "Repository",
+    "descriptionZh": "支持修改筛选条件和复用评分的简历筛选实验，仍需人工复核。"
+  },
+  {
+    "id": "project-31",
+    "category": "office",
+    "name": "typeful-triage",
+    "url": "https://github.com/cephalization/jev-triage",
+    "description": "An issue-triage dashboard covering type, severity, urgency, duplicates and next steps, with recorded human corrections.",
+    "kind": "Repository",
+    "descriptionZh": "按类型、严重程度、紧急程度和重复情况分流问题，并记录下一步操作及人工修正。"
+  },
+  {
+    "id": "project-32",
+    "category": "context",
+    "name": "fast-jev-compaction",
+    "url": "https://github.com/tamaratran/fast-jev-compaction",
+    "description": "Keep useful tool calls and results in a coding session while removing irrelevant context without summarizing it.",
+    "kind": "Repository",
+    "descriptionZh": "保留编程会话中有用的工具调用与结果，直接移除无关上下文。"
+  },
+  {
+    "id": "project-33",
+    "category": "context",
+    "name": "yoshi",
+    "url": "https://github.com/compozy/yoshi",
+    "description": "A proxy layer for Claude Code and Codex that evaluates which conversation history is still needed.",
+    "kind": "Repository",
+    "descriptionZh": "为 Claude Code 和 Codex 评估哪些对话历史仍有必要保留的代理层。"
+  },
+  {
+    "id": "project-34",
+    "category": "context",
+    "name": "wakegate",
+    "url": "https://github.com/shitianfang/wakegate",
+    "description": "Check whether a scheduled agent wake-up is necessary before waking a larger model.",
+    "kind": "Repository",
+    "descriptionZh": "在唤醒较大模型之前，先判断计划中的智能体唤醒是否必要。"
+  },
+  {
+    "id": "project-35",
+    "category": "fun",
+    "name": "Jev Trader · Jarrod Watts",
+    "url": "https://x.com/jarrodwatts/status/2100356151468585346",
+    "description": "A block-by-block trading experiment. The shared demonstration shows dry-run mode; it is not evidence of profitability.",
+    "kind": "Demo / report",
+    "descriptionZh": "按区块进行交易决策的实验；演示为模拟运行，不代表盈利能力。"
+  },
+  {
+    "id": "project-36",
+    "category": "fun",
+    "name": "HA-Jev",
+    "url": "https://github.com/AboveColin/HA-Jev",
+    "description": "A Home Assistant integration that answers questions about home state with choices, scores and probabilities.",
+    "kind": "Repository",
+    "descriptionZh": "Home Assistant 集成，用选项、评分和概率回答有关家庭状态的问题。"
+  },
+  {
+    "id": "project-37",
+    "category": "fun",
+    "name": "jevinci",
+    "url": "https://github.com/achimala/jevinci",
+    "description": "An experimental painter that selects pixel colors in parallel and uses confidence to vary brush width.",
+    "kind": "Repository",
+    "descriptionZh": "并行选择像素颜色、按置信度调整笔刷宽度的绘画实验。"
+  },
+  {
+    "id": "project-38",
+    "category": "fun",
+    "name": "pacman-jev",
+    "url": "https://github.com/NesanSelvan/pacman-jev",
+    "description": "An open-source Pac-Man experiment where Jev chooses which direction to move next.",
+    "kind": "Repository",
+    "descriptionZh": "由 Jev 选择下一步移动方向的开源吃豆人实验。"
+  },
+  {
+    "id": "project-39",
+    "category": "fun",
+    "name": "tetris-ai",
+    "url": "https://github.com/shantanugoel/tetris-ai",
+    "description": "Browser Tetris playable by a built-in planner, Jev or a chat model.",
+    "kind": "Repository",
+    "descriptionZh": "可由内置规划器、Jev 或聊天模型操作的网页版俄罗斯方块。"
+  },
+  {
+    "id": "project-40",
+    "category": "fun",
+    "name": "Jev Pong",
+    "url": "https://github.com/ably-labs/jev-pong",
+    "description": "A Pong experiment comparing model-controlled decisions as the ball moves.",
+    "kind": "Repository",
+    "descriptionZh": "在球移动时比较模型决策的 Pong 游戏实验。"
+  },
+  {
+    "id": "project-41",
+    "category": "fun",
+    "name": "robo-harness",
+    "url": "https://github.com/grmkris/robo-harness",
+    "description": "A robotic-arm workbench that selects joint actions from candidates and includes a spending limit.",
+    "kind": "Repository",
+    "descriptionZh": "从候选关节动作中进行选择、并设有消费限额的机械臂工作台。"
+  },
+  {
+    "id": "project-42",
+    "category": "eval",
+    "name": "jevcal",
+    "url": "https://github.com/abhixhek/jevcal",
+    "description": "Fit confidence thresholds to labeled examples and estimate fallback rates, with checks for model changes.",
+    "kind": "Repository",
+    "descriptionZh": "利用带标签样本校准置信度阈值、估算回退比例，并检查模型变更。"
+  },
+  {
+    "id": "project-43",
+    "category": "eval",
+    "name": "When reranking does not help",
+    "url": "https://x.com/GoSailGlobal/status/2100877682972258619",
+    "description": "A reported test of 33,047 entries and 164 queries where Jev-only reranking did not outperform vector retrieval.",
+    "kind": "Demo / report",
+    "descriptionZh": "作者报告的一项测试涉及 33,047 条数据和 164 个查询，其中仅用 Jev 重排未优于向量检索。"
+  },
+  {
+    "id": "project-44",
+    "category": "open",
+    "name": "NanoJev",
+    "url": "https://github.com/TianyuCodings/NanoJev",
+    "description": "An independent 0.6B-parameter decision-model implementation with training code, weights and data.",
+    "kind": "Repository",
+    "descriptionZh": "独立开发的 0.6B 参数决策模型实现，提供训练代码、权重和数据。"
+  },
+  {
+    "id": "project-45",
+    "category": "open",
+    "name": "Laya",
+    "url": "https://github.com/NandhaKishorM/laya",
+    "description": "An independent non-autoregressive decision-model project supporting three question types.",
+    "kind": "Repository",
+    "descriptionZh": "支持三种问题类型的独立非自回归决策模型项目。"
+  },
+  {
+    "id": "project-46",
+    "category": "open",
+    "name": "kev",
+    "url": "https://github.com/jaredpalmer/kev",
+    "description": "A small independent decision-model experiment based on Qwen2.5-0.5B, designed to train and run on a MacBook.",
+    "kind": "Repository",
+    "descriptionZh": "基于 Qwen2.5-0.5B 的小型独立决策模型实验，面向 MacBook 训练与运行。"
+  }
+]

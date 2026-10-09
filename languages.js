@@ -27,7 +27,9 @@
   menu.append(summary);
   const list = document.createElement('div');
   list.className = 'language-options';
+  const supported = document.body.dataset.locales?.split(',');
   for (const item of locales) {
+    if (supported && !supported.includes(item.code)) continue;
     const link = document.createElement('a');
     link.href = `${item.prefix}${route === '/' ? '/' : route}`;
     link.lang = item.code === 'zh' ? 'zh-CN' : item.code;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jev-demo.com/</loc>
@@ -33,4 +33,20 @@
   <url>
     <loc>https://jev-demo.com/ru/</loc>
   </url>
+  <url>
+    <loc>https://jev-demo.com/jev-github-skills/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/zh/jev-github-skills/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/tools/</loc>
+  </url>
+  <url>
+    <loc>https://jev-demo.com/zh/tools/</loc>
+  </url>
+  <url><loc>https://jev-demo.com/blog/</loc></url>
+  <url><loc>https://jev-demo.com/zh/blog/</loc></url>
+  <url><loc>https://jev-demo.com/blog/jev-vs-laya/</loc></url>
+  <url><loc>https://jev-demo.com/zh/blog/jev-vs-laya/</loc></url>
 </urlset>

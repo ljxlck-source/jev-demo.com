@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5SY53Y1WL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N5SY53Y1WL');
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jev 与 Laya 怎么选：托管 API 还是自行部署？ | JEV Demo</title><meta name="description" content="从部署责任、置信度、测试方法和完整成本比较 Jev 与 Laya，帮助团队选择适合自己的决策引擎。"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jev-demo.com/zh/blog/jev-vs-laya/">
+<link rel="alternate" hreflang="en" href="https://jev-demo.com/blog/jev-vs-laya/">
+<link rel="alternate" hreflang="zh-CN" href="https://jev-demo.com/zh/blog/jev-vs-laya/">
+<link rel="alternate" hreflang="x-default" href="https://jev-demo.com/blog/jev-vs-laya/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="JEV Demo"><meta property="og:title" content="Jev 与 Laya 怎么选：托管 API 还是自行部署？ | JEV Demo"><meta property="og:description" content="从部署责任、置信度、测试方法和完整成本比较 Jev 与 Laya，帮助团队选择适合自己的决策引擎。"><meta property="og:url" content="https://jev-demo.com/zh/blog/jev-vs-laya/"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Jev 与 Laya 怎么选：托管 API 还是自行部署？ | JEV Demo"><meta name="twitter:description" content="从部署责任、置信度、测试方法和完整成本比较 Jev 与 Laya，帮助团队选择适合自己的决策引擎。">
+<meta property="og:image" content="https://jev-demo.com/social-card.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="JEV Demo — Jev AI demos"><meta name="twitter:image" content="https://jev-demo.com/social-card.png">
+<link rel="icon" href="/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Jev 与 Laya 怎么选：托管 API 还是自行部署？", "description": "从部署责任、置信度、测试方法和完整成本比较 Jev 与 Laya，帮助团队选择适合自己的决策引擎。", "mainEntityOfPage": "https://jev-demo.com/zh/blog/jev-vs-laya/", "inLanguage": "zh-CN"}</script>
+<link rel="stylesheet" href="/sections.css"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2935482641765236" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/languages.css">
+<link rel="stylesheet" href="/guide.css"><link rel="stylesheet" href="/blog.css"></head><body data-locales="en,zh"><header><a class="brand" href="/zh/" aria-label="JEV Demo"><img class="brand-logo" src="/logo.svg" alt="" width="42" height="42"><strong>JEV <span>Demo</span></strong></a><nav class="header-nav" aria-label="主导航"><a href="/zh/">全部案例</a><a href="/zh/tools/">工具</a><a href="/zh/blog/">博客</a><a href="/zh/jev-github-skills/">Jev GitHub Skills</a><a href="/zh/how-to-use-jev/">如何使用 Jev</a><a class="language-link" href="/blog/jev-vs-laya/">English</a></nav></header><main class="guide"><article><a class="section-back" href="/zh/blog/">← 返回博客</a><h1>Jev 与 Laya 怎么选：托管 API 还是自行部署？</h1><p>如果你希望通过托管 API 接入决策能力，可以先评估 Jev；如果模型必须运行在自己的基础设施内，可以先评估 Laya。真正需要比较的是：它们能否满足你的任务、数据边界和运维条件。</p><p>本文围绕部署方式与验收方法展开，不是 JEV Demo 对两款产品进行的性能实测报告。</p>
+<nav class="guide-toc" aria-label="本文目录"><strong>本文目录</strong><a href="#task">先明确要做什么判断</a><a href="#deployment">比较部署责任</a><a href="#confidence">处理不确定的答案</a><a href="#pilot">设计公平的试用测试</a><a href="#cost">计算完整成本</a><a href="#choose">选择适合的起点</a></nav>
+<h2 id="task">先明确软件需要哪一个判断</h2><p>假设你的客服系统需要把工单分给账单、技术支持、销售或人工复核。系统需要的是一个部门结果，而不是一段介绍部门职责的文字。在挑选模型之前，应先写清楚分类定义、边界和无法判断时的处理方法。</p><p><a href="https://docs.typesafe.ai/introduction">TypeSafe 官方文档</a>将 Jev 描述为接收状态和类型化问题、返回结构化答案的模型，问题类型涵盖选项选择、按规则评分和判断陈述成立的可能性。<a href="https://github.com/NandhaKishorM/laya">Laya 项目仓库</a>则介绍了提供类似问题类型的开源决策引擎。</p><p>格式合法，不等于业务判断正确。例如，“付款失败”既可能是账单争议，也可能是技术故障。无论采用哪个模型，都需要清楚的标签定义和有代表性的测试样本。</p>
+<h2 id="deployment">明确由谁负责运行模型</h2><div class="article-table" tabindex="0" role="region" aria-label="部署方式对比"><table><thead><tr><th scope="col">比较项</th><th scope="col">Jev：托管 API 方案</th><th scope="col">Laya：自行部署方案</th></tr></thead><tbody><tr><th scope="row">接入对象</th><td>服务商 API，以及应用自身的决策逻辑。</td><td>模型服务，以及应用自身的决策逻辑。</td></tr><tr><th scope="row">团队负责什么</th><td>凭据、请求处理、超时、评估和兜底流程。</td><td>除应用层工作外，还包括容量、模型版本、安全更新和服务监控。</td></tr><tr><th scope="row">先确认什么</th><td>数据是否可以按可接受的条款发送给服务商。</td><td>基础设施与团队是否能持续支持预期负载。</td></tr></tbody></table></div>
+<p>Laya 仓库提供 Apache-2.0 许可证及本地运行、HTTP 服务相关说明，因此值得有自主部署需求的团队评估。但自行部署仍需要访问控制，也需要检查日志、依赖和网络行为，不能自动等同于隐私安全或合规。</p><p>无论选哪种方式，都应明确输入数据、日志和备份允许存放在哪里。使用托管服务时，应在发送敏感生产数据之前，确认数据保留、训练用途和合同方面的要求。</p>
+<h2 id="confidence">把置信度用于制定处理策略</h2><p>不要直接复制示例里的阈值，就认为它对应自己能接受的错误率。适合简单工单的阈值，遇到模糊表达、行业术语或另一种语言时，可能不再有效。</p><p>Laya 文档区分了不同的置信度相关字段，并建议用独立样本验证阈值。切换引擎时，需要重新确认应用使用的每个字段的含义。请求格式相似，并不代表答案或置信度可以直接互换。可参阅 <a href="https://github.com/NandhaKishorM/laya#automated-confidence-gating">Laya 的置信度说明</a>。</p><p>一个实际可用的策略应包含三条路径：接受结果、交给人工复核，以及服务失败时安全停止。两种引擎可以使用不同阈值，但应满足同一个业务目标，例如自动处理工单中可容忍的最高错误率。</p>
+<h2 id="pilot">使用相同的测试集，而不是比较宣传数字</h2><ol><li><strong>准备带标签的样本。</strong>包括常见请求、少见类别、模糊案例和应拒绝自动处理的情况。保留独立验收集，不要把它混入调参数据。</li><li><strong>固定决策规则。</strong>保持分类定义、评分标准和成功条件一致，记录模型版本及部署配置。</li><li><strong>同时看质量与覆盖率。</strong>记录自动处理中的错误、转人工比例，以及各语言、各类别的表现。如果几乎所有请求都转人工，准确率再高也未必符合目标。</li><li><strong>测量完整请求耗时。</strong>计入网络、排队、重试和冷启动，在接近实际的并发下记录中位数与 p95 延迟。</li><li><strong>主动测试异常。</strong>覆盖超时、服务不可用、输入格式错误和信息缺失，确认兜底流程真的会执行。</li></ol><p>举个假设：一个引擎错误更少，却把更多工单交给人工；另一个自动处理更多，却增加了代价高昂的误分。这不是实测结论，而是需要提前明确的取舍：在看到测试结果之前，先确定哪些错误可以接受。</p>
+<h2 id="cost">按有效结果计算完整成本</h2><p>托管 API 方案应计入调用费用、重试、兜底调用和人工复核。自行部署应计入算力、闲置容量、部署工时、监控、维护和人工复核。做预算时查阅当时的商业条款，不要沿用旧文章中的报价。</p><p>一个有用的规划指标是：总运营成本除以正确完成的自动决策数量。同时单独记录严重错误带来的损失。如果低价推理增加了返工，就不一定省钱。</p>
+<h2 id="choose">选择团队能够持续支持的起点</h2><p><strong>优先评估 Jev：</strong>允许使用托管服务，并希望减少模型服务的运维工作。<strong>优先评估 Laya：</strong>自主部署是明确要求，而且团队有人能长期负责运行和维护。无论从哪个开始，都需要在真实任务上验证。</p><p>需要接入步骤，可以阅读独立教程<a href="/zh/how-to-use-jev/">如何使用 Jev</a>；想查看实现项目，可以浏览 <a href="/zh/jev-github-skills/">Jev GitHub Skills</a>。</p>
+<h2>常见问题</h2><h3>结构化输出能保证判断正确吗？</h3><p>不能。符合规定格式与选择正确答案是两件事，需要分别测试。</p><h3>开源意味着生产运行免费吗？</h3><p>不意味着。部署、维护以及负责服务的人力仍然需要预算。</p><h3>测好一种语言就能代表其他语言吗？</h3><p>不能。应覆盖实际用户使用的语言和业务术语；如果会出现混合语言输入，也应加入测试。</p>
+<footer><p>根据提供的对比资料重新编排，并补充实际评估建议。产品资料参考：<a href="https://docs.typesafe.ai/introduction">TypeSafe 官方文档</a>、<a href="https://github.com/NandhaKishorM/laya">Laya 项目仓库</a>。JEV Demo 是独立网站，本文不代表厂商背书，也不声称提供原创跑分结果。</p></footer></article></main><script src="/languages.js" defer></script></body></html>
